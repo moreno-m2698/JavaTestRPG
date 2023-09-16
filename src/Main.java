@@ -1,20 +1,23 @@
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.println("This is a simple demo created for the purposes of learning Java.");
-        System.out.println("Welcome to my RPG.");
-        System.out.println("Welcome please select a class by typing in its name: MAGE, KNIGHT");
 
-        S
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        String heroClass = GameFunctions.HeroInput();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        if (!heroClass.equalsIgnoreCase("MAGE") && !heroClass.equalsIgnoreCase("KNIGHT")) {
+            System.out.println("did not pick valid class");
         }
+        else {
+            System.out.println("Congrats picked valid class");
+        }
+
+
+
+
+        boolean isPlayerTurn = true;
+        boolean isInEncounter = false;
+
     }
 }
