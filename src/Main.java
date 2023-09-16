@@ -4,14 +4,26 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        String heroClass = GameFunctions.HeroInput();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("This is a simple demo created for the purposes of learning Java.");
+        System.out.println("Welcome to my RPG.");
+        System.out.println("Welcome please select a class by typing in its name: MAGE, KNIGHT");
+        String heroClass = sc.next();
+        System.out.println("You entered: " + heroClass);
 
-        if (!heroClass.equalsIgnoreCase("MAGE") && !heroClass.equalsIgnoreCase("KNIGHT")) {
-            System.out.println("did not pick valid class");
+        boolean isInputCorrect = false;
+        while (!isInputCorrect) {
+            if (!heroClass.equalsIgnoreCase("MAGE") && !heroClass.equalsIgnoreCase("KNIGHT")) {
+                System.out.println("did not pick valid class");
+                System.out.println("Please select a class by typing in its name: MAGE, KNIGHT");
+                heroClass = sc.next();
+            } else {
+                System.out.println("Congrats picked valid class");
+                isInputCorrect = true;
+            }
         }
-        else {
-            System.out.println("Congrats picked valid class");
-        }
+
+        System.out.println("You made it out of the loop");
 
 
 
