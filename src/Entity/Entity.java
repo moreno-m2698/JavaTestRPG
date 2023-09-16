@@ -6,7 +6,7 @@ public class Entity
     int mana;
     int attack;
     int defense;
-    String name;
+    public String name;
 
     public Entity(int health, int mana, int attack, int defense, String name) {
         this.health = health;
@@ -14,6 +14,9 @@ public class Entity
         this.attack = attack;
         this.defense = defense;
         this.name = name;
+    }
+    public Entity() {
+
     }
 
 
