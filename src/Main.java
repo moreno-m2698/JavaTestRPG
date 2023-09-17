@@ -13,13 +13,9 @@ public class Main {
         boolean isInEncounter = false;
         boolean isPlayerPlaying = true;
 
-
         while(isPlayerPlaying) {
 
             String enemy = "Slime";
-
-
-
             String encounterString = String.format("A wild %s approaches you", enemy);
             isInEncounter=true;
             System.out.println(encounterString);

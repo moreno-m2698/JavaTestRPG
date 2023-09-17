@@ -2,10 +2,10 @@ package Entity;
 
 public class Entity
 {
-    int health;
-    int mana;
-    int attack;
-    int defense;
+    public int health;
+    public int mana;
+    public int attack;
+    public int defense;
     public String name;
 
     public Entity(int health, int mana, int attack, int defense, String name) {
